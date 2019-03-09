@@ -263,16 +263,23 @@ footer {
     text-align: center;
   }
 }
-/* line 257, ../sass/style.scss */
+@media only screen and (max-width: 392px) {
+  /* line 246, ../sass/style.scss */
+  footer {
+    display: block;
+    text-align: center;
+  }
+}
+/* line 261, ../sass/style.scss */
 footer > * {
   margin: 0 auto;
 }
-/* line 260, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 footer .social-2 {
   display: inline-block;
   width: 100%;
 }
-/* line 263, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 footer .social-2 h3 {
   font-size: 1.3rem;
   font-family: "Lato", sans-serif;
@@ -280,18 +287,18 @@ footer .social-2 h3 {
   color: #04c7cf;
   display: inline-block;
 }
-/* line 270, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 footer .social-2 ul {
   list-style: none;
   display: inline-block;
   margin-left: 2%;
 }
-/* line 274, ../sass/style.scss */
+/* line 278, ../sass/style.scss */
 footer .social-2 ul li {
   display: inline-block;
   margin-right: 10px;
 }
-/* line 277, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 footer .social-2 ul li i {
   font-size: 1.3rem;
   color: #04c7cf;
@@ -300,53 +307,53 @@ footer .social-2 ul li i {
   border-radius: 5px;
 }
 @media only screen and (min-width: 393px) and (max-width: 768px) {
-  /* line 260, ../sass/style.scss */
+  /* line 264, ../sass/style.scss */
   footer .social-2 {
     display: block;
   }
 }
 @media only screen and (max-width: 392px) {
-  /* line 260, ../sass/style.scss */
+  /* line 264, ../sass/style.scss */
   footer .social-2 {
     display: block;
   }
 }
-/* line 293, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 footer .logo {
   width: 20%;
   margin: 0 0;
 }
 @media only screen and (min-width: 393px) and (max-width: 768px) {
-  /* line 293, ../sass/style.scss */
+  /* line 297, ../sass/style.scss */
   footer .logo {
     display: block;
     width: 30%;
   }
 }
 @media only screen and (max-width: 392px) {
-  /* line 293, ../sass/style.scss */
+  /* line 297, ../sass/style.scss */
   footer .logo {
     display: block;
   }
 }
-/* line 304, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 footer .links {
   width: 100%;
 }
-/* line 306, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 footer .links a {
   margin-left: 10px;
   color: #e3feff;
   font-size: "Raleway", sans-serif;
 }
 @media only screen and (min-width: 393px) and (max-width: 768px) {
-  /* line 304, ../sass/style.scss */
+  /* line 308, ../sass/style.scss */
   footer .links {
     display: block;
   }
 }
 @media only screen and (max-width: 392px) {
-  /* line 304, ../sass/style.scss */
+  /* line 308, ../sass/style.scss */
   footer .links {
     display: block;
   }

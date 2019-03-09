@@ -254,6 +254,10 @@ footer {
         display: block;
         text-align: center;
     }
+    @include responsive(xs) {
+        display: block;
+        text-align: center;
+    }
     &>* {
         margin: 0 auto;
     }
