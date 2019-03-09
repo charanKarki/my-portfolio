@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,400i,500|Srisakdi:400,700");
+// font variables
+$heading: "Srisakdi",
+cursive;
+$small-heading: "Lato",
+sans-serif;
+$para: "Raleway",
+sans-serif;
+//color variables
+$dark: #005878;
+$light: #00a8b0;
+$font-color: #04c7cf;
+$html-bg: #e3feff;
+@mixin gradient($deg) {
+    background: linear-gradient($deg, $dark, $light)
+}
+
+// media mixins
+$xs:392px;
+$sm:768px;
+$md:992px;
+$lg:1200px;
+@mixin responsive($width) {
+    @if $width==xs {
+        @media only screen and (max-width: $xs) {
+            @content
+        }
+    }
+    @else if $width==sm {
+        @media only screen and (min-width: $xs + 1) and (max-width: $sm) {
+            @content
+        }
+    }
+    @else if $width==md {
+        @media only screen and (min-width: $sm + 1) and (max-width: $md) {
+            @content
+        }
+    }
+    @else if $width==lg {
+        @media only screen and (min-width: $md+1) and (max-width: $lg) {
+            @content
+        }
+    }
+}
+
+// font size
+$big-h1: 2.3rem;
+$h1: 2rem;
+$h3: 1.3rem;
+$p: 1.1rem;
+// body style
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+
+body {
+    background: $html-bg;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: $big-h1;
+    font-family: $small-heading;
+    margin: 20px;
+    color: $font-color;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .navbar-brand {
+        width: 30%;
+        .mylogo {
+            width: 40%;
+            @include responsive(xs) {
+                width: 100%;
+            }
+            @include responsive(sm) {
+                width: 50%
+            }
+        }
+    }
+    .navbar-nav {
+        text-align: center;
+        .nav-item {
+            margin-right: 10%;
+            border-radius: 2px;
+            .nav-link {
+                color: $font-color;
+                font-size: $p - .1rem;
+                padding: 0.2rem 1rem;
+            }
+            &:hover {
+                background: $dark;
+            }
+        }
+        .active {
+            background: $dark;
+        }
+    }
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    .svgbg_1_Class {
+        fill: url(#LinearGradientFill1);
+    }
+    .svgbg_1 {
+        position: absolute;
+        width: 70%;
+        z-index: -1;
+        top: 0%;
+        right: 0;
+        @include responsive(xs) {
+            widows: 92%;
+        }
+    }
+    #myimg {
+        position: absolute;
+        width: 33%;
+        left: 63%;
+        top: 15%;
+        @include responsive(sm) {
+            top: 7%;
+        }
+        @include responsive(xs) {
+            top: 8%;
+            left: 51%;
+        }
+    }
+    #about {
+        width: 40%;
+        margin: 0 0 10% 10%;
+        padding: 23% 0;
+        @include responsive(sm) {
+            width: 60%
+        }
+        @include responsive(xs) {
+            width: 100%;
+            padding: 60% 0;
+        }
+        h1 {
+            font-size: $big-h1;
+            font-family: $small-heading;
+            display: inline-block;
+            margin-bottom: 20px;
+            @include responsive(xs) {
+                margin: 5px 0;
+            }
+        }
+        h1:last-of-type {
+            font-family: $para;
+            font-weight: 400;
+            background: $dark;
+            padding: 0 19px;
+            margin-left: 10px;
+            color: $html-bg;
+            border-radius: 3px;
+        }
+        p {
+            font-family: $para;
+            font-size: $p;
+            opacity: .8;
+        }
+        .social-1 {
+            h3 {
+                font-size: $h3;
+                font-family: $small-heading;
+                color: $font-color;
+            }
+            ul {
+                list-style: none;
+                text-align: center;
+                li {
+                    display: inline-block;
+                    margin-right: 10px;
+                    i {
+                        font-size: $h1;
+                        color: $font-color;
+                        border: 1px solid $font-color;
+                        padding: 5px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#skills {
+    padding: 50px;
+    margin: 20vh 0;
+    text-align: center;
+    background: 72% 0% no-repeat url("../img/pattern.svg"), linear-gradient(45deg, $dark, $light);
+    background-size: 120%;
+    .row {
+        align-items: center;
+        margin-top: 5rem;
+        .col-md-3 {
+            position: relative;
+            justify-self: center;
+            .rectangle {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                transform: rotate(45deg);
+                background: rgb(236, 236, 236);
+                border-radius: 4px;
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.397);
+            }
+            i {
+                position: absolute;
+                font-size: 66px;
+                color: $light;
+                z-index: 100;
+                left: 36%;
+                top: 15%
+            }
+        }
+    }
+}
+
+#my_work {
+    text-align: center;
+    padding: 2rem;
+    background: url("../img/pattern.svg") no-repeat 50% 0%, linear-gradient(45deg, $dark, $light);
+    background-size: 115%;
+    .row {
+        margin: 50px 0;
+        img {
+            width: 100%;
+            box-shadow: -2px -3px 20px 4px #00000061;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 30vh;
+    text-align: center;
+    padding: 30px 0 0 0;
+    @include gradient(30deg);
+    display: flex;
+    align-items: center;
+    @include responsive(sm) {
+        display: block;
+        text-align: center;
+    }
+    &>* {
+        margin: 0 auto;
+    }
+    .social-2 {
+        display: inline-block;
+        width: 100%;
+        h3 {
+            font-size: $h3;
+            font-family: $small-heading;
+            font-weight: 300;
+            color: $font-color;
+            display: inline-block;
+        }
+        ul {
+            list-style: none;
+            display: inline-block;
+            margin-left: 2%;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                i {
+                    font-size: $h3;
+                    color: $font-color;
+                    border: 1px solid $font-color;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+        }
+        @include responsive(sm) {
+            display: block;
+        }
+        @include responsive(xs) {
+            display: block;
+        }
+    }
+    .logo {
+        width: 20%;
+        margin: 0 0;
+        @include responsive(sm) {
+            display: block;
+            width: 30%
+        }
+        @include responsive(xs) {
+            display: block;
+        }
+    }
+    .links {
+        width: 100%;
+        a {
+            margin-left: 10px;
+            color: $html-bg;
+            font-size: $para;
+        }
+        @include responsive(sm) {
+            display: block;
+        }
+        @include responsive(xs) {
+            display: block;
+        }
+    }
+}
