@@ -58,6 +58,9 @@ $p: 1.1rem;
 body {
     background: $html-bg;
     overflow-x: hidden;
+    @include responsive(xs) {
+        overflow-x: hidden;
+    }
 }
 
 h1 {
